@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.windyziheng.mcmedialoader.view.RatioFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_video_rv_media"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/iv_video_item_video_rv_media"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_pic_loading" />
+
+    <ImageView
+        android:id="@+id/iv_play_item_video_rv_media"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_video_play" />
+
+</com.windyziheng.mcmedialoader.view.RatioFrameLayout>
