@@ -1,15 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -30,9 +29,22 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+}
 
+allprojects {
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
+}
+
+publish {
+    userOrg = 'wzhdev'
+    repoName = 'github'
+    groupId = 'com.windyziheng'
+    artifactId = 'McMediaLoader'
+    publishVersion = '1.0.1'
+    desc = 'Make it easy to load Media(Image, Video) from Android device storage.'
+    website = 'https://github.com/windyziheng/McMediaLoader'
 }
