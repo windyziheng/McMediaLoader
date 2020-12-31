@@ -25,7 +25,7 @@ allprojects {
 Add the dependency to your app `build.gradle` file:
 
 ```
-implementation 'com.windyziheng:McMediaLoader:1.0.1'
+implementation 'com.windyziheng:McMediaLoader:1.0.2'
 ```
 
 ### Step 3.

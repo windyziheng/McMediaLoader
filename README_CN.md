@@ -25,7 +25,7 @@ allprojects {
 将依赖添加到你的 app `build.gradle` 文件：
 
 ```
-implementation 'com.windyziheng:McMediaLoader:1.0.1'
+implementation 'com.windyziheng:McMediaLoader:1.0.2'
 ```
 
 ### 步骤 3.

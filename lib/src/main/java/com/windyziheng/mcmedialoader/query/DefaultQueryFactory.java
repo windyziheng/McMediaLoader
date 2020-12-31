@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Size;
 
 import com.windyziheng.mcmedialoader.constant.MediaType;
@@ -152,9 +153,15 @@ public final class DefaultQueryFactory extends QueryFactory<MediaEntity> {
         String mimeType = cursor.getString(cursor.getColumnIndex(MediaStore.MediaColumns.MIME_TYPE));
         //5.获取视频的分辨率
         String resolutionText = cursor.getString(cursor.getColumnIndex(MediaStore.Video.VideoColumns.RESOLUTION));
-        String[] texts = resolutionText.split("[×x]");
-        int width = Integer.parseInt(texts[0]);
-        int height = Integer.parseInt(texts[1]);
+        int width = 0;
+        int height = 0;
+        if (!TextUtils.isEmpty(resolutionText)) {
+            String[] texts = resolutionText.split("[×x]");
+            if (texts != null && texts.length > 0) {
+                width = Integer.parseInt(texts[0]);
+                height = Integer.parseInt(texts[1]);
+            }
+        }
         Size resolution = new Size(width, height);
         //6.获取视频的时长
         long duration = cursor.getLong(cursor.getColumnIndex(MediaStore.Video.VideoColumns.DURATION));
