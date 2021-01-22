@@ -13,11 +13,15 @@ buildscript {
 }
 
 allprojects {
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
     repositories {
         google()
         jcenter()
         maven {
-            url "https://wzhdev.bintray.com/github"
+            url "https://dl.bintray.com/wzh0508/github"
         }
     }
 }

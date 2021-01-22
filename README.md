@@ -14,7 +14,7 @@ Add the following Gradle configuration to your Android project. In your root `bu
 allprojects {
     repositories {
         maven {
-            url "https://wzhdev.bintray.com/github"
+            url "https://dl.bintray.com/wzh0508/github"
         }
     }
 }

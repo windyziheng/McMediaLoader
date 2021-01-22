@@ -32,15 +32,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
 
-allprojects {
-    tasks.withType(Javadoc) {
-        options.addStringOption('Xdoclint:none', '-quiet')
-        options.addStringOption('encoding', 'UTF-8')
-    }
-}
-
 publish {
-    userOrg = 'wzhdev'
+    userOrg = 'wzh0508'
     repoName = 'github'
     groupId = 'com.windyziheng'
     artifactId = 'McMediaLoader'

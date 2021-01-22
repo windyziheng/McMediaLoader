@@ -14,7 +14,7 @@
 allprojects {
     repositories {
         maven {
-            url "https://wzhdev.bintray.com/github"
+            url "https://dl.bintray.com/wzh0508/github"
         }
     }
 }

@@ -36,7 +36,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation project(path: ':lib')
-//    implementation 'com.windyziheng:McMediaLoader:1.0.1'
+//    implementation 'com.windyziheng:McMediaLoader:1.0.2'
 
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
